@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div className='h-[72px] '>
+    <div className='h-[72px] w-screen'>
       <div className='flex justify-between content-center py-6 px-10'>
-        <div className='text-3xl'>
+        <div className='text-3xl font-semibold'>
           <Link to='/'>CROKSHOP</Link>
         </div>
         <div>
