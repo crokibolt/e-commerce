@@ -23,7 +23,7 @@ function Navbar() {
             </div>
             <div className='relative hover:border-t-black border-t-2 border-white'>
               <Link to='/Cart'>
-                <FontAwesomeIcon icon={faCartShopping} /> <span className='absolute text-sm top-[-6px] right-[-17px] rounded-xl px-2 bg-blue-500'>0</span>
+                <FontAwesomeIcon icon={faCartShopping} /> <span className='absolute text-sm top-[-6px] right-[-17px] rounded-xl px-2 bg-green-500'>0</span>
               </Link>
             </div>
           </div>
