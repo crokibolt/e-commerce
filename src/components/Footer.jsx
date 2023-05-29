@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="fixed bottom-0 left-0 w-screen h-[250px] px-8 py-3">
+    <div className="w-screen h-[200px] px-8 py-3 text-justify">
       <div className="flex justify-between content-center text-gray-500 gap-10  ">
         <div>
           <p className="font-bold text-center">Who are we?</p>
