@@ -15,6 +15,12 @@ const slide_data = [
   },
 ];
 
+const translate_styles = {
+  0: "translate-x-[-0vw]",
+  1: "translate-x-[-100vw]",
+  2: "translate-x-[-200vw]",
+};
+
 function Slider() {
   const [count, setCount] = useState(0);
 
@@ -25,7 +31,7 @@ function Slider() {
   useEffect(() => {
     const timerId = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(timerId);
   }, [count]);
@@ -33,22 +39,24 @@ function Slider() {
   return (
     <div className="h-[calc(100vh-80px)] w-screen overflow-hidden">
       <div
-        className={`flex w-[300vw] translate-x-[-${
-          count * 100
-        }vw] transition duration-1000 ease-linear`}
+        className={
+          "flex w-[300vw] " +
+          translate_styles[count] +
+          " transition duration-1000 ease-in-out"
+        }
       >
         <img
-          className="w-screen object-cover relative bottom-[70vh]"
+          className="w-screen object-cover relative bottom-[70vh] "
           src={slide_data[0].img}
           alt=""
         />
         <img
-          className="w-screen object-cover relative bottom-[70vh]"
+          className="w-screen h-full object-cover relative bottom-[60vh] "
           src={slide_data[1].img}
           alt=""
         />
         <img
-          className="w-screen object-cover relative bottom-[100vh]"
+          className="w-screen object-cover relative bottom-[90vh] "
           src={slide_data[2].img}
           alt=""
         />
