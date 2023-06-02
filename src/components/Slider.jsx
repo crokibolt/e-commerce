@@ -3,15 +3,15 @@ import React, { useEffect, useState } from "react";
 const slide_data = [
   {
     id: 0,
-    img: "https://images.pexels.com/photos/2881785/pexels-photo-2881785.jpeg",
+    img: "https://images.pexels.com/photos/175696/pexels-photo-175696.jpeg",
   },
   {
     id: 1,
-    img: "https://images.pexels.com/photos/3263460/pexels-photo-3263460.jpeg",
+    img: "https://images.pexels.com/photos/944761/pexels-photo-944761.jpeg",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/2899937/pexels-photo-2899937.jpeg",
+    img: "https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg",
   },
 ];
 
@@ -46,17 +46,17 @@ function Slider() {
         }
       >
         <img
-          className="w-screen object-cover relative bottom-[70vh] "
+          className="w-screen object-cover relative bottom-[310px]"
           src={slide_data[0].img}
           alt=""
         />
         <img
-          className="w-screen h-full object-cover relative bottom-[60vh] "
+          className="w-screen h-full object-cover relative bottom-[75px]"
           src={slide_data[1].img}
           alt=""
         />
         <img
-          className="w-screen object-cover relative bottom-[90vh] "
+          className="w-screen object-cover relative bottom-[280px]"
           src={slide_data[2].img}
           alt=""
         />
