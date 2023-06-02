@@ -46,8 +46,10 @@ const popular_products = [
 
 function Highlighted() {
   return (
-    <div className="text-justify w-screen mt-9 px-6">
-      <h3 className="text-2xl mb-10 font-bold ml-10">Trending Products</h3>
+    <div className="text-justify w-screen mt-9 px-6 border-t border-black">
+      <h3 className="text-2xl mb-10 font-bold ml-10 py-10">
+        Trending Products
+      </h3>
       <div className="flex gap-7 h-[550px] overflow-hidden justify-center">
         <HighlightedCard item={popular_products[0]} />
         <HighlightedCard item={popular_products[1]} />
