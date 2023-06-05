@@ -37,7 +37,7 @@ function Slider() {
   }, [count]);
 
   return (
-    <div className="h-[calc(100vh-80px)] w-screen overflow-hidden">
+    <div className="h-[calc(100vh-72px)] w-screen overflow-hidden">
       <div
         className={
           "flex w-[300vw] " +
