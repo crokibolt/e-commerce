@@ -51,10 +51,9 @@ function Highlighted() {
         Trending Products
       </h3>
       <div className="flex gap-7 h-[550px] overflow-hidden justify-center">
-        <HighlightedCard item={popular_products[0]} />
-        <HighlightedCard item={popular_products[1]} />
-        <HighlightedCard item={popular_products[2]} />
-        <HighlightedCard item={popular_products[3]} />
+        {popular_products.map((item, i) => (
+          <HighlightedCard item={item} key={item.id} />
+        ))}
       </div>
     </div>
   );
