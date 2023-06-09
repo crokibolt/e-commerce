@@ -20,9 +20,7 @@ function Categories() {
             className=" h-full w-full object-cover mx-auto"
           />
           <Link to="/products">
-            <button className="absolute top-[50%] left-[46%] bg-gray-500 bg-opacity-70 p-2 rounded-sm font-semibold scale-0 group-hover:scale-100 transition-all ease-linear duration-200 hover:bg-white">
-              All Products
-            </button>
+            <button className="category-button">All Products</button>
           </Link>
         </div>
         <div className="row-start-2 row-end-3 col-span-1 ml-auto overflow-hidden group relative">
@@ -33,9 +31,7 @@ function Categories() {
             className="h-full w-full object-cover object-left"
           />
           <Link to="/products">
-            <button className="absolute top-[50%] left-[46%] w-[100px] bg-gray-500 bg-opacity-70 p-2 rounded-sm font-semibold scale-0 group-hover:scale-100 transition-all ease-linear duration-200 hover:bg-white">
-              Men
-            </button>
+            <button className="category-button w-[100px] ">Men</button>
           </Link>
         </div>
         <div className="row-start-2 row-end-3 col-span-1 mr-auto overflow-hidden group relative">
@@ -46,9 +42,7 @@ function Categories() {
             className="w-full object-center translate-y-[0px]"
           />
           <Link to="/products">
-            <button className="absolute top-[50%] left-[46%] w-[100px] bg-gray-500 bg-opacity-70 p-2 rounded-sm font-semibold scale-0 group-hover:scale-100 transition-all ease-linear duration-200 hover:bg-white">
-              Women
-            </button>
+            <button className="category-button w-[100px]">Women</button>
           </Link>
         </div>
       </div>
