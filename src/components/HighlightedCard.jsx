@@ -5,7 +5,7 @@ function HighlightedCard(props) {
   const { item } = props;
   return (
     <div className="w-[250px] flex flex-col gap-3">
-      <Link to={`product/${item.id}`}>
+      <Link to={`../product/${item.id}`}>
         <div className="w-full h-[400px] overflow-hidden relative group rounded-md shadow-md shadow-gray-600">
           <img
             src={item.mainImg}
