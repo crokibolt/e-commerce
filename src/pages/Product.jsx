@@ -15,7 +15,7 @@ function Product({ addToCart }) {
   ];
 
   return (
-    <div className="w-screen h-content min-h-screen bg-slate-400 p-5 flex">
+    <div className="w-screen h-content min-h-screen bg-gray-300 p-5 flex">
       <ImageDisplay item={item} />
       <div className="w-[1100px] px-[230px]">
         <h1 className="text-3xl font-semibold tracking-wider text-center mt-[60px] ">

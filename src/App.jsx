@@ -11,19 +11,22 @@ import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="font-sans">
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:id" element={<Product />} />
-        </Routes>
-        <Footer />
+        <ScrollToTop>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<Product />} />
+          </Routes>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );

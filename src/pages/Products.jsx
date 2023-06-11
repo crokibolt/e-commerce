@@ -44,8 +44,8 @@ function Products() {
   };
 
   return (
-    <div className="w-screen min-h-screen h-content mt-4">
-      <h1 className="text-5xl text-center font-semibold tracking-wide my-4 p-4 border-t-2 border-t-black">
+    <div className="w-screen min-h-screen h-content mt-4 bg-gray-300 py-5">
+      <h1 className="text-5xl text-center font-semibold tracking-wide my-4 p-4">
         Products
       </h1>
       <div className="flex w-full">
