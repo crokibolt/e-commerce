@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import productsArray from "../data/productsData";
 import Select from "react-select";
 import ImageDisplay from "../components/ImageDisplay";
+import { CartContext } from "../components/CartContext";
 
-function Product({ addToCart }) {
+function Product() {
   const { id } = useParams();
+  const { addToCart } = useContext(CartContext);
   const item = productsArray.find((x) => x.id == id);
   const sizesArray = [
     { value: "s", label: "S" },
@@ -46,6 +48,7 @@ function Product({ addToCart }) {
             id="size-select"
             name="sizes"
             isSearchable={false}
+            defaultValue={sizesArray[0]}
             options={sizesArray}
             className="my-6 "
           />
@@ -54,7 +57,7 @@ function Product({ addToCart }) {
               Price: ${item.price}
             </p>
             <button
-              onClick={addToCart}
+              onClick={() => addToCart(item)}
               className="text-md font-semibold bg-green-400 rounded-md p-3"
             >
               Add to cart

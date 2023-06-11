@@ -1,9 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 function Navbar() {
+  const { cart } = useContext(CartContext);
+
+  const [cartCount, setCartCount] = useState(0);
+
+  const getCartCount = () => {
+    let count = 0;
+    cart.map((e) => (count += e.quantity));
+    return count;
+  };
+
+  useEffect(() => {
+    let newCount = getCartCount();
+    setCartCount(newCount);
+  }, [cart]);
+
   return (
     <div className="h-[72px] w-screen">
       <div className="flex justify-between content-center py-6 px-10">
@@ -25,7 +41,7 @@ function Navbar() {
               <Link to="/Cart">
                 <FontAwesomeIcon icon={faCartShopping} />
                 <span className="absolute text-sm top-[-6px] right-[-17px] rounded-xl px-2 bg-green-500">
-                  0
+                  {cartCount}
                 </span>
               </Link>
             </div>
