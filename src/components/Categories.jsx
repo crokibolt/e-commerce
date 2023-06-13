@@ -30,7 +30,7 @@ function Categories() {
             srcset=""
             className="h-full w-full object-cover object-left"
           />
-          <Link to="/products">
+          <Link to="/products/Male">
             <button className="category-button w-[100px] ">Men</button>
           </Link>
         </div>
@@ -41,7 +41,7 @@ function Categories() {
             srcset=""
             className="w-full object-center translate-y-[0px]"
           />
-          <Link to="/products">
+          <Link to="/products/Female">
             <button className="category-button w-[100px]">Women</button>
           </Link>
         </div>

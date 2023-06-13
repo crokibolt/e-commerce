@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HighlightedCard from "../components/HighlightedCard";
 import productsArray from "../data/productsData";
+import { useParams } from "react-router-dom";
 
 function Products() {
+  const { gender } = useParams();
   const categoriesList = [];
   productsArray.forEach((item, i) => {
     if (categoriesList.indexOf(item.type) === -1) {
@@ -11,6 +13,14 @@ function Products() {
   });
 
   const [products, setProducts] = useState(productsArray);
+
+  useEffect(() => {
+    if (gender) {
+      const radio = document.getElementById(gender.toLowerCase());
+      radio.checked = true;
+      setProductsAfterFilter(gender, null);
+    }
+  }, []);
 
   const applyFilters = (e) => {
     e.preventDefault();
@@ -23,6 +33,10 @@ function Products() {
       "input[name=category]:checked"
     )?.value;
 
+    setProductsAfterFilter(genderSelected, categorySelected);
+  };
+
+  const setProductsAfterFilter = (genderSelected, categorySelected) => {
     setProducts(() => {
       let newProds = [...productsArray];
       if (genderSelected) {
