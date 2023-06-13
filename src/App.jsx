@@ -13,10 +13,15 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import ScrollToTop from "./components/ScrollToTop";
 import { CartContext } from "./components/CartContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const localCart = JSON.parse(localStorage.getItem("cart"));
+  const [cart, setCart] = useState(localCart ? localCart : []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (item) => {
     const itemToAdd = { ...item, quantity: 1 };

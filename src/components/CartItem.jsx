@@ -6,15 +6,15 @@ function CartItem({ id }) {
   const item = cart.find((e) => e.id == id);
 
   return (
-    <div className="h-[120px] flex gap-2 justify-evenly items-center border-b border-b-black">
-      <div className="h-full w-[120px] overflow-hidden rounded-lg w-fit-content ">
+    <div className="h-[120px] flex gap-2 justify-evenly items-center border-b border-b-black py-3">
+      <div className="h-full w-[120px] overflow-hidden rounded-lg w-fit-content">
         <img
           src={item.mainImg}
           alt=""
           className="h-[110px] w-[120px] object-cover rounded-lg scale-[1]"
         />
       </div>
-      <div className="pt-1">
+      <div className=" w-[300px] pt-1 text-center">
         <h4 className="text-2xl font-semibold tracking-wider mb-4">
           {item.name}
         </h4>
