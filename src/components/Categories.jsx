@@ -21,7 +21,7 @@ function Categories() {
             srcset=""
             className=" h-full w-full object-cover mx-auto"
           />
-          <Link to="/products">
+          <Link to="/e-commerce/products">
             <button className="category-button left-[160px] sm:left-[46%]">
               All Products
             </button>
@@ -34,7 +34,7 @@ function Categories() {
             srcset=""
             className="h-full w-full object-cover object-center lg:object-left"
           />
-          <Link to="/products/Male">
+          <Link to="/e-commerce/products/Male">
             <button className="category-button left-[30px] sm:left-[50%] w-[100px]">
               Men
             </button>
@@ -47,7 +47,7 @@ function Categories() {
             srcset=""
             className="w-full h-full object-cover object-center lg:h-fit"
           />
-          <Link to="/products/Female">
+          <Link to="/e-commerce/products/Female">
             <button className="category-button left-[60px] w-[100px] sm:left-[45%]">
               Women
             </button>
