@@ -46,11 +46,11 @@ const popular_products = [
 
 function Highlighted() {
   return (
-    <div className="text-justify w-screen px-6 bg-black text-white">
-      <h3 className="text-2xl mb-10 font-bold ml-10 py-10">
+    <div className="md:text-justify relative text-center pt-[40px] w-screen px-6 bg-black text-white overflow-x-scroll">
+      <h3 className="text-2xl relative mb-10 top-2 font-bold ml-10 md:py-10 py-2">
         Trending Products
       </h3>
-      <div className="flex gap-7 h-[550px] overflow-hidden justify-center">
+      <div className="flex md:gap-7 gap-4 h-[550px] pl-[530px] sm:pl-0  md:overflow-hidden justify-center">
         {popular_products.map((item, i) => (
           <HighlightedCard item={item} key={item.id} />
         ))}

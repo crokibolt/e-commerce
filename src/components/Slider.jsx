@@ -40,23 +40,24 @@ function Slider() {
     <div className="h-[calc(100vh-72px)] w-screen overflow-hidden">
       <div
         className={
-          "flex w-[300vw] " +
+          "flex w-[300vw] h-full " +
           translate_styles[count] +
           " transition duration-1000 ease-in-out"
         }
       >
         <img
-          className="w-screen object-cover relative bottom-[310px]"
+          className="w-screen h-full object-cover lg:object-bottom"
           src={slide_data[0].img}
           alt=""
         />
+
         <img
-          className="w-screen h-full object-cover relative bottom-[75px]"
+          className="w-screen h-full object-cover lg:object-top"
           src={slide_data[1].img}
           alt=""
         />
         <img
-          className="w-screen object-cover relative bottom-[280px]"
+          className="w-screen h-full object-cover object-center-right md:object-center "
           src={slide_data[2].img}
           alt=""
         />

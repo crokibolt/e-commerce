@@ -59,11 +59,11 @@ function Products() {
 
   return (
     <div className="w-screen min-h-screen h-content mt-4 bg-gray-300 py-5">
-      <h1 className="text-5xl text-center font-semibold tracking-wide my-4 p-4">
+      <h1 className="md:text-5xl text-2xl text-center font-semibold tracking-wide my-3 md:my-4 md:p-4">
         Products
       </h1>
       <div className="flex w-full">
-        <div className="h-screen w-[500px] fixed flex flex-col items-start pl-6">
+        <div className="h-screen w-[500px] fixed flex flex-col items-start pl-6 hidden md:block">
           <form
             id="filter-form"
             className="text-justify"
@@ -104,7 +104,7 @@ function Products() {
             </button>
           </form>
         </div>
-        <div className="ml-[500px] w-[calc(100vw - 500px)] pr-10 flex gap-8 flex-wrap">
+        <div className="md:ml-[500px] ml-[80px] w-[calc(100vw - 500px)] pr-10 flex gap-8 flex-wrap">
           {products.length > 0 ? (
             products.map((item, i) => (
               <HighlightedCard item={item} key={item.id} />

@@ -11,6 +11,6 @@
 
 @layer components {
     .category-button {
-        @apply absolute top-[50%] left-[46%] bg-gray-500 bg-opacity-70 p-2 rounded-sm font-semibold scale-0 group-hover:scale-100 transition-all ease-linear duration-200 hover:bg-white
+        @apply absolute top-[50%] bg-gray-500 bg-opacity-70 p-2 rounded-sm font-semibold md:scale-0 md:group-hover:scale-100 transition-all ease-linear duration-200 hover:bg-white
     }
 }

@@ -22,19 +22,19 @@ function Navbar() {
 
   return (
     <div className="h-[72px] w-screen">
-      <div className="flex justify-between content-center py-6 px-10">
-        <div className="text-3xl font-semibold tracking-widest">
+      <div className="flex justify-between content-center py-6 px-3 md:px-10">
+        <div className="text-xl md:text-3xl font-semibold tracking-widest">
           <Link to="/">CROKSHOP</Link>
         </div>
         <div>
-          <div className="flex items-center justify-evenly text-xl gap-8 relative">
+          <div className="flex items-center justify-evenly text-md md:text-xl gap-4 md:gap-8 relative">
             <div className="navbar-item">
               <Link to="/">Homepage</Link>
             </div>
             <div className="navbar-item">
               <Link to="/products">Products</Link>
             </div>
-            <div className="navbar-item">
+            <div className="navbar-item hidden md:block">
               <Link to="/">Contact us</Link>
             </div>
             <div className="relative navbar-item">

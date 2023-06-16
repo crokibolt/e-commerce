@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function HighlightedCard(props) {
   const { item } = props;
   return (
-    <div className="w-[250px] flex flex-col gap-3">
+    <div className="w-[250px] flex flex-col gap-3 flex-shrink-0 sm:flex-shrink-1">
       <Link to={`../product/${item.id}`}>
         <div className="w-full h-[400px] overflow-hidden relative group rounded-md shadow-md shadow-gray-600">
           <img

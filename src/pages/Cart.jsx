@@ -13,9 +13,9 @@ function Cart() {
   };
 
   return (
-    <div className="h-screen w-screen px-[200px] bg-gray-300 pt-[16px] flex flex-col gap-5">
+    <div className="h-screen w-screen px-4 md:px-[200px] bg-gray-300 pt-[16px] flex flex-col gap-2 md:gap-5">
       {cart.length == 0 ? (
-        <p className="text-center text-xl font-semibold text-red-500 mt-[100px]">
+        <p className="text-center text-xl font-semibold text-red-500 mt-[75px] md:mt-[100px]">
           Shopping Cart is empty
         </p>
       ) : (
@@ -25,11 +25,11 @@ function Cart() {
               <CartItem id={e.id} key={e.id} />
             ))}
           </div>
-          <div className="flex text-2xl font-bold justify-between border-t-2 border-t-black">
+          <div className="flex text-xl md:text-2xl font-bold justify-between border-t-2 border-t-black">
             <p>Total</p>
             <p>${obtainTotal()}</p>
           </div>
-          <div className="flex text-lg font-semibold justify-between">
+          <div className="flex text-base md:text-lg font-semibold justify-between">
             <button
               className="border border-red-600 p-2 rounded-lg hover:bg-red-300"
               onClick={clearCart}

@@ -15,10 +15,10 @@ function CartItem({ id }) {
         />
       </div>
       <div className=" w-[300px] pt-1 text-center">
-        <h4 className="text-2xl font-semibold tracking-wider mb-4">
+        <h4 className="text-xl md:text-2xl font-semibold tracking-wider mb-2 md:mb-4">
           {item.name}
         </h4>
-        <p className="text-lg text-center">
+        <p className="text-base md:text-lg text-center">
           {" "}
           Quantity:{" "}
           <button
@@ -37,7 +37,7 @@ function CartItem({ id }) {
         </p>
       </div>
       <div className="w-[90px]">
-        <p className="text-2xl font-semibold">
+        <p className="text-xl md:text-2xl font-semibold">
           ${eval(item.price + "*" + item.quantity)}
         </p>
       </div>

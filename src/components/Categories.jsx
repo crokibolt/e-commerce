@@ -9,9 +9,11 @@ const category_images = [
 
 function Categories() {
   return (
-    <div className="h-screen w-screen mb-[50px]">
-      <h2 className="text-2xl text-center font-bold py-10">Categories</h2>
-      <div className="h-[90%] w-[50%] mx-auto grid grid-rows-2 grid-cols-2 ">
+    <div className="h-screen w-screen mb-[20px] md:mb-[50px]">
+      <h2 className="md:text-2xl text-xl text-center font-bold md:py-10 py-2">
+        Categories
+      </h2>
+      <div className="h-[90%] md:w-[50%] mx-auto grid grid-rows-2 grid-cols-2 ">
         <div className="col-span-2 relative group ">
           <img
             src={category_images[0]}
@@ -20,7 +22,9 @@ function Categories() {
             className=" h-full w-full object-cover mx-auto"
           />
           <Link to="/products">
-            <button className="category-button">All Products</button>
+            <button className="category-button left-[160px] sm:left-[46%]">
+              All Products
+            </button>
           </Link>
         </div>
         <div className="row-start-2 row-end-3 col-span-1 ml-auto overflow-hidden group relative">
@@ -28,10 +32,12 @@ function Categories() {
             src={category_images[1]}
             alt=""
             srcset=""
-            className="h-full w-full object-cover object-left"
+            className="h-full w-full object-cover object-center lg:object-left"
           />
           <Link to="/products/Male">
-            <button className="category-button w-[100px] ">Men</button>
+            <button className="category-button left-[30px] sm:left-[50%] w-[100px]">
+              Men
+            </button>
           </Link>
         </div>
         <div className="row-start-2 row-end-3 col-span-1 mr-auto overflow-hidden group relative">
@@ -39,10 +45,12 @@ function Categories() {
             src={category_images[2]}
             alt=""
             srcset=""
-            className="w-full object-center translate-y-[0px]"
+            className="w-full h-full object-cover object-center lg:h-fit"
           />
           <Link to="/products/Female">
-            <button className="category-button w-[100px]">Women</button>
+            <button className="category-button left-[60px] w-[100px] sm:left-[45%]">
+              Women
+            </button>
           </Link>
         </div>
       </div>
