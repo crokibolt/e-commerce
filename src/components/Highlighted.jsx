@@ -46,7 +46,7 @@ const popular_products = [
 
 function Highlighted() {
   return (
-    <div className="md:text-justify relative text-center pt-[40px] w-screen px-6 bg-black text-white overflow-x-scroll">
+    <div className="md:text-justify relative text-center pt-[40px] w-screen px-6 bg-black text-white overflow-x-auto">
       <h3 className="text-2xl relative mb-10 top-2 font-bold ml-10 md:py-10 py-2">
         Trending Products
       </h3>

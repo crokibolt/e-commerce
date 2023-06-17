@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MyImage from "./MyImage";
 
 const category_images = [
   "https://images.pexels.com/photos/10679171/pexels-photo-10679171.jpeg",
@@ -21,6 +22,7 @@ function Categories() {
             srcset=""
             className=" h-full w-full object-cover mx-auto"
           />
+
           <Link to="/e-commerce/products">
             <button className="category-button left-[160px] sm:left-[46%]">
               All Products

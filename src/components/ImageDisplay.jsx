@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import MyImage from "./MyImage";
 
 function ImageDisplay({ item }) {
   const [selectedImg, setSelectedImg] = useState(item.mainImg);
@@ -32,10 +33,13 @@ function ImageDisplay({ item }) {
         </div>
       </div>
       <div className="w-[380px] md:w-[450px] h-[500px] my-3  transition-all duration-700 ease-linear">
-        <img
-          src={selectedImg}
-          alt=""
-          className=" h-[458px] md:h-[688px] w-full rounded-lg object-cover"
+        <MyImage
+          source={selectedImg}
+          divClasses={" h-[458px] md:h-[688px] w-full rounded-lg"}
+          imageClasses={
+            " h-[458px] md:h-[688px] w-full rounded-lg object-cover"
+          }
+          spinnerClasses={" my-[80%] md:my-[70%]"}
         />
       </div>
     </div>

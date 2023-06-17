@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MyImage from "./MyImage";
 
 const slide_data = [
   {
@@ -45,21 +46,45 @@ function Slider() {
           " transition duration-1000 ease-in-out"
         }
       >
-        <img
+        {/* <img
           className="w-screen h-full object-cover lg:object-bottom"
           src={slide_data[0].img}
           alt=""
+        /> */}
+
+        <MyImage
+          source={slide_data[0].img}
+          divClasses={"w-screen h-full"}
+          imageClasses={"w-screen h-full object-cover lg:object-bottom"}
+          spinnerClasses={" my-[90%] md:my-[20%]"}
         />
 
-        <img
+        {/* <img
           className="w-screen h-full object-cover lg:object-top"
           src={slide_data[1].img}
           alt=""
+        /> */}
+
+        <MyImage
+          source={slide_data[1].img}
+          divClasses={"w-screen h-full"}
+          imageClasses={"w-screen h-full object-cover lg:object-top"}
+          spinnerClasses={" my-[90%] md:my-[30%]"}
         />
-        <img
+
+        {/* <img
           className="w-screen h-full object-cover object-center-right md:object-center "
           src={slide_data[2].img}
           alt=""
+        /> */}
+
+        <MyImage
+          source={slide_data[2].img}
+          divClasses={"w-screen h-full"}
+          imageClasses={
+            "w-screen h-full object-cover object-center-right md:object-center"
+          }
+          spinnerClasses={" my-[90%] md:my-[30%]"}
         />
       </div>
     </div>
